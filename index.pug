@@ -1,0 +1,60 @@
+mixin articulo(curso,grupo,titulo,integrantes,resumen)
+	- var poster = `${curso}/grupo-${grupo}/poster.jpg`
+	- var informe = `${curso}/grupo-${grupo}/informe.pdf`
+	article
+		img(class="poster",src=poster, alt=`poster científico`)
+		.informacion
+			h3.titulo= titulo
+			h4.integrantes= integrantes
+			p.resumen= resumen
+			p.informe
+				a(href=informe) Artículo Científico
+			p.poster
+				a(href=poster) Poster Científico
+
+<!DOCTYPE html>
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Sentidos que perciben... Cerebreo que puede ser engañado
+		link(rel="stylesheet", href="style.css")
+	body
+
+		.presentacion
+			.texto
+				h1 Sentidos que perciben... Cerebreo que puede ser engañado			
+				h2 Colegio San José de Marcos Paz
+				p Los alumnos/as de 4to y 5to año del Colegio San José de Marcos Paz nos invitan a "desconfiar" de nuestro cerebro.
+				p Mediante distintos informes intentarán dar respuesta a ilusiones ópticas y auditivas, a la percepción del tiempo. También se interpelan sobre ¿qué es ruido blanco y para qué nos ayuda? y ¿qué es la sinestesia?.
+			img(src="escudo.png", alt="")
+		
+
+		.trabajos
+			+articulo('4a',1,'Ilusión óptica "El chocolate infinito"','Emma Arias Mommeso, E A; Salpurido, S; Méndez, P; Zappala, L; Oviedo, R')
+
+			+articulo('4a',2,'Los engaños de las ilusiones opticas','Lecumberry, M; Marquez, F; Blanco, T; Buttafuoco, F; Sotarello, M')
+
+			+articulo('4a',3,'La percepción del tiempo','de Rocha, M L; Díaz, A; Moyano, J; Sanchez, M')
+
+			+articulo('4a',4,'Paradoja del cuadrado perdido','Arana, A; Narváez, A; Díaz, B; Sanabria, B; Zandonadi, C; Díaz, G')
+
+			+articulo('4a',5,'La extraña paradoja de Shepard', 'Gallinares, L; Reccia, E; Soto, I; Soto, F')
+
+			+articulo('4a',6,'Respuestas condicionadas','Carrizo, A; Dominguez, T; Esteves, D; García, F')
+
+			+articulo('4a',7,'Ilusión de Hering', 'Mandaradoni, JP; Saravia, N')
+
+			+articulo('4b',1,'El misterio del vestido viral', 'Ibarra, C; Bejarano, N; Traba, M; Díaz, L; Schiaffi, C; Urbizu, C')
+
+			+articulo('4b',2, 'Ilusión de Craikcornsweet','Toloza, K; Ramirez, M; Dominguez, A; Ribeiro, G; Ledesma, L')
+
+			+articulo('4b',3,'Neurociencia computacional','Oviedo, L; Díaz, C')
+
+			+articulo('4b',4,'Christopher Nolan y la manipulación del sonido','Arainty, V; Gonzalez, V; Delpieri, M; Benitez Bohm, J')
+
+			+articulo('4b',5,'¿Yanny o Laurel?', 'Abt Momesso; Cahue; Hidalgo; Testtibraga; Damico; Rotela, J')
+
+			+articulo('4b',6,'El ser humano y las ilusiones auditivas','Gonzalez, M; Madía, V; Villaba, M')
+
+			+articulo('4b',7,'El efecto Shepard','Becerra, CT; Lannelongue, J; Nieto, V; Salpurido, V')
