@@ -29,7 +29,6 @@ body h3 {
   }
 }
 article * {
-  padding: 0;
   margin: 5px;
 }
 
@@ -56,11 +55,13 @@ p.informe a {
   margin: 5px;
   padding: 5px;
   text-align: center;
+  transition: 0.3s;
 }
 
 p.poster a:hover,
 p.informe a:hover {
   transform: scale(1.05);
+  color: #f7c301;
 }
 
 .presentacion {
