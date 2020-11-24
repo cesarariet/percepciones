@@ -78,15 +78,17 @@ p.informe a:hover {
   animation: inicio 1s;
   .texto {
     text-align: justify;
-    width: 55%;
+    width: 65%;
   }
   h1,
   h2 {
     text-align: center;
   }
+  figure {
+    margin: auto auto;
+  }
   img {
-    width: 30%;
-    margin: 5%;
+    width: 100%;
   }
 }
 
@@ -96,5 +98,29 @@ p.informe a:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .trabajos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .trabajos {
+    grid-template-columns: 1fr;
+  }
+  .presentacion {
+    display: inherit;
+    .texto {
+      width: inherit;
+      padding: 5vw;
+    }
+    figure {
+      width: 80px;
+    }
+  }
+  .poster {
+    margin: 20px auto;
   }
 }

@@ -73,15 +73,17 @@ p.informe a:hover {
 }
 .presentacion .texto {
   text-align: justify;
-  width: 55%;
+  width: 65%;
 }
 .presentacion h1,
 .presentacion h2 {
   text-align: center;
 }
+.presentacion figure {
+  margin: auto auto;
+}
 .presentacion img {
-  width: 30%;
-  margin: 5%;
+  width: 100%;
 }
 
 @keyframes inicio {
@@ -90,5 +92,30 @@ p.informe a:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .trabajos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .trabajos {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion {
+    display: inherit;
+  }
+  .presentacion .texto {
+    width: inherit;
+    padding: 5vw;
+  }
+  .presentacion figure {
+    width: 80px;
+  }
+
+  .poster {
+    margin: 20px auto;
   }
 }
