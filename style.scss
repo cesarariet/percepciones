@@ -19,6 +19,17 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  animation-name: inicioTrabajos;
+  animation-duration: 1s;
+}
+@keyframes inicioTrabajos {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 article * {
@@ -28,12 +39,17 @@ article * {
 
 article {
   img {
-    display: none;
+    display: block;
     width: 90%;
+    margin: 10px auto;
+    filter: grayscale(90%);
+    border-radius: 4px;
     transition: 0.4s;
   }
-  article:hover img {
+  &:hover img {
     display: block;
+    transform: scale(1.05);
+    filter: grayscale(0%);
   }
 }
 p.poster a,
@@ -54,11 +70,26 @@ p.informe a:hover {
 .presentacion {
   display: flex;
   justify-content: space-evenly;
+  animation: inicio 1s;
   .texto {
-    width: 60%;
+    text-align: justify;
+    width: 55%;
+  }
+  h1,
+  h2 {
+    text-align: center;
   }
   img {
     width: 30%;
     margin: 5%;
+  }
+}
+
+@keyframes inicio {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
